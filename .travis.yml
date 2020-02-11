@@ -16,10 +16,10 @@ after_success:
     # Login to the docker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     # Take those images and push them to docker hub
-    - docker push elerno/multi-client
-    - docker push elerno/multi-nginx
-    - docker push elerno/multi-server
-    - docker push elerno/multi-worker
+    - docker push elerno/multi-client:master
+    - docker push elerno/multi-nginx:master
+    - docker push elerno/multi-server:master
+    - docker push elerno/multi-worker:master
 
 deploy:
     provider: elasticbeanstalk
